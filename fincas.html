@@ -1,1 +1,108 @@
-Manuel 
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Encuentra fincas para descansar, compartir y vivir el paisaje del Lago Calima.">
+	<title>Fincas | Calima vive el lago</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="index.html" aria-label="Calima, inicio">
+			<span class="brand-mark" aria-hidden="true">C</span>
+			<span><strong>calima</strong><small>vive el lago</small></span>
+		</a>
+		<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+			<span></span><span></span><span></span>
+		</button>
+		<nav id="main-nav" class="main-nav" aria-label="Navegacion principal">
+			<a href="index.html">Inicio</a>
+			<a class="active" href="fincas.html">Fincas</a>
+			<a href="cabanas.html">Cabanas</a>
+			<a href="hoteles.html">Hoteles</a>
+			<a href="restaurantes.html">Restaurantes</a>
+			<a href="planes.html">Planes</a>
+			<a href="lugares.html">Lugares</a>
+		</nav>
+		<a class="header-action" href="#fincas-seleccionadas">Explorar <span aria-hidden="true">&#8599;</span></a>
+	</header>
+
+	<main>
+		<section class="finca-hero" aria-labelledby="finca-hero-title">
+			<div class="finca-hero-content">
+				<p class="eyebrow"><span></span> Descanso rural junto al lago</p>
+				<h1 id="finca-hero-title">Tu casa por unos dias,<br><em>tu paisaje para siempre.</em></h1>
+				<p class="hero-copy">Fincas amplias para despertar entre montanas, reunirte con los tuyos y dejar que el viento marque el ritmo.</p>
+				<a class="button button-primary" href="#fincas-seleccionadas">Ver fincas <span aria-hidden="true">&#8594;</span></a>
+			</div>
+			<div class="hero-note"><span class="note-line"></span><span>Espacios para compartir sin prisa</span></div>
+			<div class="scroll-cue"><span></span> Desliza para descubrir</div>
+		</section>
+
+		<section class="finca-intro section-shell" aria-labelledby="finca-intro-title">
+			<div>
+				<p class="eyebrow eyebrow-dark"><span></span> Una forma distinta de quedarse</p>
+				<h2 id="finca-intro-title">Respira profundo,<br><em>el lago esta cerca.</em></h2>
+			</div>
+			<div class="finca-intro-copy">
+				<p>Las fincas de Calima son el punto de encuentro entre la comodidad y la naturaleza. Hay lugar para el asado, la sobremesa, la piscina y esas conversaciones que solo aparecen cuando nadie tiene afan.</p>
+				<a class="text-link text-link-dark" href="#fincas-seleccionadas">Conoce nuestras recomendaciones <span aria-hidden="true">&#8595;</span></a>
+			</div>
+		</section>
+
+		<section id="fincas-seleccionadas" class="finca-list section-shell" aria-labelledby="finca-list-title">
+			<div class="section-heading finca-heading">
+				<div>
+					<p class="eyebrow eyebrow-dark"><span></span> Elige tu refugio</p>
+					<h2 id="finca-list-title">Fincas para cada<br><em>forma de escapar.</em></h2>
+				</div>
+				<p>Desde planes en familia hasta fines de semana con amigos. Encuentra el espacio que combina contigo.</p>
+			</div>
+			<div class="finca-grid">
+				<article class="finca-card finca-card-large finca-card-family">
+					<div class="finca-card-overlay"></div>
+					<div class="finca-card-content"><span class="card-number">01 / PARA COMPARTIR</span><h3>Casa amplia<br><em>para la familia.</em></h3><p>Habitaciones comodas, cocina equipada y zonas verdes para todos.</p></div>
+				</article>
+				<article class="finca-card finca-card-friends">
+					<div class="finca-card-overlay"></div>
+					<div class="finca-card-content"><span class="card-number">02 / PARA CELEBRAR</span><h3>Un fin de semana<br><em>entre amigos.</em></h3><p>Piscina, asado y noches largas bajo las estrellas.</p></div>
+				</article>
+				<article class="finca-card finca-card-couple">
+					<div class="finca-card-overlay"></div>
+					<div class="finca-card-content"><span class="card-number">03 / PARA DESCONECTAR</span><h3>Calma para<br><em>dos.</em></h3><p>Un rincon tranquilo para bajar el ruido y mirar el paisaje.</p></div>
+				</article>
+			</div>
+		</section>
+
+		<section class="finca-guide section-shell" aria-labelledby="guide-title">
+			<div class="finca-guide-image" role="img" aria-label="Terraza de una finca con vista a las montanas"></div>
+			<div class="finca-guide-content">
+				<p class="eyebrow eyebrow-dark"><span></span> Antes de reservar</p>
+				<h2 id="guide-title">Pequenos detalles,<br><em>grandes recuerdos.</em></h2>
+				<ul class="finca-tips">
+					<li><strong>Pregunta por la vista.</strong><span>El amanecer cambia de ventana en ventana.</span></li>
+					<li><strong>Confirma los espacios.</strong><span>Revisa piscina, cocina y zonas para compartir.</span></li>
+					<li><strong>Deja tiempo libre.</strong><span>En Calima, el mejor plan a veces es no tener uno.</span></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="closing-section section-shell">
+			<p class="eyebrow eyebrow-dark"><span></span> Tu proxima pausa</p>
+			<h2>El campo te esta<br><em>esperando.</em></h2>
+			<a class="button button-dark" href="planes.html">Descubrir planes <span aria-hidden="true">&#8594;</span></a>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<span class="brand-footer">calima <small>vive el lago</small></span>
+		<span>Una guia local para perderse bonito.</span>
+		<span>&copy; 2026 Calima</span>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>

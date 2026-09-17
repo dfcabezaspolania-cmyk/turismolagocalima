@@ -31,6 +31,9 @@ button { color: inherit; font: inherit; }
 .menu-toggle span { background: var(--ink); display: block; height: 2px; margin: 4px 0; width: 22px; }
 
 .hero { background: linear-gradient(90deg, rgba(11, 45, 47, .85), rgba(11, 45, 47, .2)), url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85') center/cover; color: white; height: min(760px, 100vh); min-height: 620px; padding: 210px 11vw 60px; position: relative; }
+.finca-hero { background: linear-gradient(90deg, rgba(11, 45, 47, .88), rgba(11, 45, 47, .18)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2000&q=85') center/cover; color: white; height: min(700px, 92vh); min-height: 590px; padding: 195px 11vw 60px; position: relative; }
+.finca-hero-content { max-width: 650px; }
+.finca-hero h1 { font-family: var(--serif); font-size: clamp(45px, 5.8vw, 78px); letter-spacing: -.06em; line-height: .98; margin: 0; }
 .hero-content { max-width: 590px; }
 .eyebrow { align-items: center; color: rgba(255, 255, 255, .75); display: flex; font-size: 10px; font-weight: 700; gap: 9px; letter-spacing: .18em; margin: 0 0 22px; text-transform: uppercase; }
 .eyebrow span { background: var(--coral); display: block; height: 6px; width: 6px; }
@@ -45,6 +48,7 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 600; }
 .button-primary span, .button-dark span { font-size: 17px; line-height: 10px; }
 .text-link { border-bottom: 1px solid rgba(255, 255, 255, .5); font-size: 11px; padding-bottom: 6px; }
 .text-link span { color: var(--coral); font-size: 16px; margin-left: 6px; }
+.text-link-dark { border-color: var(--line); color: var(--ink); display: inline-block; margin-top: 15px; }
 .hero-note { align-items: center; bottom: 54px; display: flex; font-size: 10px; gap: 11px; letter-spacing: .12em; position: absolute; right: 11vw; text-transform: uppercase; }
 .note-line { background: var(--coral); display: block; height: 1px; width: 35px; }
 .scroll-cue { align-items: center; bottom: 50px; display: flex; font-size: 9px; gap: 10px; left: 11vw; letter-spacing: .14em; position: absolute; text-transform: uppercase; transform: rotate(-90deg); transform-origin: left center; }
@@ -55,6 +59,32 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 600; }
 .section-heading, .gallery-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 45px; }
 .section-heading h2, .gallery-heading h2 { font-size: clamp(36px, 4vw, 59px); }
 .section-heading > p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0 0 7px; max-width: 265px; }
+.finca-intro { align-items: end; display: grid; gap: 10vw; grid-template-columns: 1.1fr .8fr; padding-bottom: 92px; }
+.finca-intro h2, .finca-heading h2, .finca-guide h2 { font-size: clamp(38px, 4vw, 61px); }
+.finca-intro-copy { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 370px; }
+.finca-intro-copy p { margin: 0; }
+.finca-heading { align-items: end; }
+.finca-grid { display: grid; gap: 16px; grid-template-columns: 1.3fr 1fr; grid-template-rows: 270px 270px; }
+.finca-card { background-position: center; background-size: cover; color: white; min-height: 270px; overflow: hidden; position: relative; }
+.finca-card-large { grid-row: span 2; }
+.finca-card-family { background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85'); }
+.finca-card-friends { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85'); }
+.finca-card-couple { background-image: url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85'); }
+.finca-card-overlay { background: linear-gradient(0deg, rgba(8, 30, 31, .82), transparent 72%); inset: 0; position: absolute; }
+.finca-card-content { bottom: 24px; left: 24px; max-width: 360px; position: absolute; right: 24px; }
+.finca-card-content .card-number { display: block; font-size: 9px; letter-spacing: .14em; margin-bottom: 12px; }
+.finca-card-content h3 { font-family: var(--serif); font-size: 30px; line-height: 1; margin: 0; }
+.finca-card-content h3 em { color: var(--coral); font-style: italic; font-weight: 600; }
+.finca-card-content p { color: rgba(255, 255, 255, .78); font-size: 12px; line-height: 1.5; margin: 12px 0 0; max-width: 270px; }
+.finca-card:hover .finca-card-overlay { background: linear-gradient(0deg, rgba(8, 30, 31, .92), rgba(8, 30, 31, .1)); }
+.finca-guide { align-items: center; display: grid; gap: 8vw; grid-template-columns: 1fr 1fr; padding-top: 55px; }
+.finca-guide-image { background: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85') center/cover; min-height: 500px; }
+.finca-guide-content { max-width: 470px; }
+.finca-tips { list-style: none; margin: 35px 0 0; padding: 0; }
+.finca-tips li { border-top: 1px solid var(--line); display: grid; gap: 8px; grid-template-columns: 1fr 1fr; padding: 17px 0; }
+.finca-tips li:last-child { border-bottom: 1px solid var(--line); }
+.finca-tips strong { font-size: 13px; }
+.finca-tips span { color: var(--muted); font-size: 12px; line-height: 1.5; }
 .category-grid { display: grid; gap: 16px; grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: 220px 220px; }
 .category-card { background-position: center; background-size: cover; color: white; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 22px; position: relative; transition: transform .3s; }
 .category-card::before { background: linear-gradient(0deg, rgba(8, 30, 31, .72), transparent 70%); content: ''; inset: 0; position: absolute; }
@@ -114,6 +144,14 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 600; }
   .scroll-cue { display: none; }
   .section-shell { padding: 78px 8vw; }
   .section-heading, .gallery-heading { align-items: flex-start; flex-direction: column; gap: 25px; }
+  .finca-intro { align-items: start; display: flex; flex-direction: column; gap: 28px; padding-bottom: 65px; }
+  .finca-intro-copy { max-width: none; }
+  .finca-grid { display: flex; flex-direction: column; gap: 12px; }
+  .finca-card, .finca-card-large { min-height: 300px; }
+  .finca-guide { display: flex; flex-direction: column; gap: 42px; padding-top: 20px; }
+  .finca-guide-image { min-height: 320px; width: 100%; }
+  .finca-guide-content { max-width: none; width: 100%; }
+  .finca-tips li { grid-template-columns: 1fr; gap: 6px; }
   .category-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 210px 170px 170px; }
   .category-tall { grid-row: span 2; }
   .category-food { grid-column: 1 / span 2; }
