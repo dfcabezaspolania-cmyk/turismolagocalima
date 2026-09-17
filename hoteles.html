@@ -1,1 +1,561 @@
-howeimar viveros
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoteles Lago Calima</title>
+    <style>
+      :root {
+        --azul-oscuro: #0f2f52;
+        --azul-medio: #1b5c8a;
+        --azul-claro: #a9d9f8;h
+        --verde: #4cae72;
+        --verde-oscuro: #2f7d4d;
+        --blanco: #ffffff;
+        --gris-fondo: #edf4f9;
+        --gris-texto: #374151;
+        --sombra: 0 12px 30px rgba(15, 47, 82, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #eff7ff 0%, #edf4f9 100%);
+        color: var(--gris-texto);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1100px, 90%);
+        margin: 0 auto;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+        color: var(--blanco);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .menu {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .menu a {
+        color: var(--blanco);
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .menu a:hover {
+        opacity: 1;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: 0.3s ease;
+      }
+
+      .btn-primary {
+        background: var(--verde);
+        color: var(--blanco);
+      }
+
+      .btn-primary:hover {
+        background: var(--verde-oscuro);
+      }
+
+      .hero {
+        background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        min-height: 420px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 28, 46, 0.45);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        color: var(--blanco);
+        max-width: 700px;
+        padding: 50px 0;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2.3rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin-bottom: 14px;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-bottom: 20px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 42px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        color: var(--azul-oscuro);
+        margin-bottom: 8px;
+      }
+
+      .section-title p {
+        color: var(--gris-texto);
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      .hoteles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+
+      .hotel-card {
+        background: var(--blanco);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--sombra);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .hotel-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 35px rgba(15, 47, 82, 0.18);
+      }
+
+      .hotel-card img {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .hotel-info {
+        padding: 22px 20px 25px;
+      }
+
+      .hotel-info h3 {
+        color: var(--azul-oscuro);
+        margin-bottom: 8px;
+      }
+
+      .hotel-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 12px 0 18px;
+        color: var(--gris-texto);
+        font-size: 0.95rem;
+      }
+
+      .precio {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--verde-oscuro);
+      }
+
+      .hotel-info p {
+        margin-bottom: 18px;
+      }
+
+      .btn-secondary {
+        background: var(--azul-claro);
+        color: var(--azul-oscuro);
+      }
+
+      .beneficios {
+        background: var(--blanco);
+      }
+
+      .beneficios-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .beneficio {
+        background: var(--gris-fondo);
+        border-radius: 16px;
+        padding: 28px 20px;
+        text-align: center;
+        border: 1px solid rgba(27, 92, 138, 0.08);
+      }
+
+      .beneficio i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--azul-claro);
+        color: var(--azul-oscuro);
+        font-size: 1.5rem;
+        margin-bottom: 14px;
+      }
+
+      .cta {
+        background: linear-gradient(135deg, #123d68, #1b5c8a);
+        color: var(--blanco);
+        text-align: center;
+      }
+
+      .cta h2 {
+        margin-bottom: 18px;
+      }
+
+      .cta p {
+        max-width: 700px;
+        margin: 0 auto 24px;
+      }
+
+      footer {
+        background: #0d1f31;
+        color: #dfeaf3;
+        padding: 26px 0;
+        text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        .nav {
+          flex-direction: column;
+          padding: 16px 0;
+        }
+
+        .menu {
+          justify-content: center;
+          gap: 12px 16px;
+        }
+
+        .hero {
+          min-height: 360px;
+        }
+
+        section {
+          padding: 65px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">Lago Calima</div>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#hoteles">Hoteles</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary" href="index.html">Volver al inicio</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Hospédate junto al lago Calima</h1>
+          <p>
+            Descubre alojamientos con vista panorámica, descanso total y una experiencia
+            inolvidable para familias, parejas y viajeros aventureros.
+          </p>
+          <a class="btn btn-primary" href="#hoteles">Ver hoteles</a>
+        </div>
+      </section>
+
+      <section id="hoteles">
+        <div class="container">
+          <div class="section-title">
+            <h2>Hoteles destacados</h2>
+            <p>
+              Elige el lugar ideal para disfrutar del paisaje, la tranquilidad y la mejor
+              atención del lago Calima.
+            </p>
+          </div>
+
+          <div class="hoteles-grid">
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Hotel Mirador del Lago" />
+              <div class="hotel-info">
+                <h3>Hotel Mirador del Lago</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.8 / 5</span>
+                  <span>Medellín</span>
+                </div>
+                <p>
+                  Habitaciones con vista al lago, restaurante y actividades para toda la familia.
+                </p>
+                <div class="precio">$180.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Hotel Bosque Calima" />
+              <div class="hotel-info">
+                <h3>Hotel Bosque Calima</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.7 / 5</span>
+                  <span>Zona verde</span>
+                </div>
+                <p>
+                  Ideal para descansar en un entorno natural con piscina, senderos y zonas de relax.
+                </p>
+                <div class="precio">$210.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80" alt="Hotel Playa Serena" />
+              <div class="hotel-info">
+                <h3>Hotel Playa Serena</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.9 / 5</span>
+                  <span>Frente al agua</span>
+                </div>
+                <p>
+                  Experiencia de lujo y comodidad con terraza, spa y accesos directos a la orilla.
+                </p>
+                <div class="precio">$260.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Hotel Encanto del Calima" />
+              <div class="hotel-info">
+                <h3>Hotel Encanto del Calima</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.6 / 5</span>
+                  <span>Miradores</span>
+                </div>
+                <p>
+                  Ambiente romántico, espacios abiertos y vistas panorámicas sobre el embalse.
+                </p>
+                <div class="precio">$195.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80" alt="Hotel Cielo del Lago" />
+              <div class="hotel-info">
+                <h3>Hotel Cielo del Lago</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.7 / 5</span>
+                  <span>Vista panorámica</span>
+                </div>
+                <p>
+                  Habitaciones espaciosas con desayuno incluido y acceso a áreas de recreación.
+                </p>
+                <div class="precio">$220.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=900&q=80" alt="Hotel San Rafael Calima" />
+              <div class="hotel-info">
+                <h3>Hotel San Rafael Calima</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.5 / 5</span>
+                  <span>Zona tranquila</span>
+                </div>
+                <p>
+                  Lugar ideal para desconectarse con servicio de piscina, parqueadero y atención personalizada.
+                </p>
+                <div class="precio">$170.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" alt="Hotel Terraza del Sol" />
+              <div class="hotel-info">
+                <h3>Hotel Terraza del Sol</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.8 / 5</span>
+                  <span>Atardeceres</span>
+                </div>
+                <p>
+                  Terraza con vista espectacular al lago y ambiente relajado para familias y parejas.
+                </p>
+                <div class="precio">$240.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="Hotel Villa del Lago" />
+              <div class="hotel-info">
+                <h3>Hotel Villa del Lago</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.7 / 5</span>
+                  <span>Clima cálido</span>
+                </div>
+                <p>
+                  Alojamiento acogedor con jardines, piscina y acceso a actividades náuticas.
+                </p>
+                <div class="precio">$205.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Hotel El Remanso" />
+              <div class="hotel-info">
+                <h3>Hotel El Remanso</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.6 / 5</span>
+                  <span>Silencio y paz</span>
+                </div>
+                <p>
+                  Ideal para descansar junto al agua con restaurante local y senderos ecológicos.
+                </p>
+                <div class="precio">$185.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+
+            <article class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1468824357306-a439d58f4c10?auto=format&fit=crop&w=900&q=80" alt="Hotel Laguna Verde" />
+              <div class="hotel-info">
+                <h3>Hotel Laguna Verde</h3>
+                <div class="hotel-meta">
+                  <span>⭐ 4.9 / 5</span>
+                  <span>Ecohotel</span>
+                </div>
+                <p>
+                  Experiencia ecológica con habitaciones confortables y actividades al aire libre.
+                </p>
+                <div class="precio">$275.000 / noche</div>
+                <br />
+                <a class="btn btn-secondary" href="#contacto">Reservar</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" class="beneficios">
+        <div class="container">
+          <div class="section-title">
+            <h2>¿Qué incluye tu visita?</h2>
+            <p>
+              En los hoteles del lago Calima podrás disfrutar de servicios pensados para tu comodidad.
+            </p>
+          </div>
+
+          <div class="beneficios-box">
+            <div class="beneficio">
+              <i>🏨</i>
+              <h3>Habitaciones cómodas</h3>
+              <p>Espacios modernos con Wi‑Fi, TV y vista privilegiada.</p>
+            </div>
+            <div class="beneficio">
+              <i>🍽️</i>
+              <h3>Restaurantes</h3>
+              <p>Menú local e internacional con ambiente relajado.</p>
+            </div>
+            <div class="beneficio">
+              <i>🚤</i>
+              <h3>Turismo en el lago</h3>
+              <p>Acceso a paseos, actividades náuticas y recorridos.</p>
+            </div>
+            <div class="beneficio">
+              <i>🌿</i>
+              <h3>Entorno natural</h3>
+              <p>Senderos, miradores y zonas verdes para conectarte con la naturaleza.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="cta">
+        <div class="container">
+          <h2>Planifica tu próxima escapada</h2>
+          <p>
+            Reserva tu hospedaje favorito y vive una experiencia inolvidable con paisajes,
+            tranquilidad y aventura en el lago Calima.
+          </p>
+          <a class="btn btn-primary" href="index.html">Regresar a la página principal</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Lago Calima • Turismo y hospedaje</p>
+      </div>
+    </footer>
+  </body>
+</html>
