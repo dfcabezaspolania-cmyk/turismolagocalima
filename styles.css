@@ -123,3 +123,22 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 600; }
   .gallery-caption strong { font-size: 25px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 14px; padding: 25px 8vw; }
 }
+
+/* Estilo auxiliar para mostrar tres tarjetas en fila de manera uniforme en la página de cabañas */
+.cabins-grid-3 {
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: 280px !important;
+}
+
+@media (max-width: 900px) {
+  .cabins-grid-3 {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .cabins-grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
