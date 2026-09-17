@@ -15,7 +15,29 @@ if (menuToggle && mainNav) {
   });
 }
 
-const galleryItems = [
+const page = document.body.dataset.page;
+const galleryItems = page === 'restaurantes' ? [
+  {
+    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=85',
+    title: 'Mesa junto al lago',
+    location: 'Restaurante Mirador'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=85',
+    title: 'Sabor de la tierra',
+    location: 'Cocina local'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85',
+    title: 'Noches con sazón',
+    location: 'Bistro Calima'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1800&q=85',
+    title: 'Cena bajo la brisa',
+    location: 'Terraza del Lago'
+  }
+] : [
   {
     image: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85',
     title: 'Viento sobre el agua',

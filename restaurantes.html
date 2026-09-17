@@ -1,1 +1,113 @@
-Doralu
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre los mejores restaurantes y sabores del Lago Calima.">
+  <title>Calima | Restaurantes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="restaurantes">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Calima, inicio">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span><strong>calima</strong><small>vive el lago</small></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegacion principal">
+      <a href="index.html">Inicio</a>
+      <a href="fincas.html">Fincas</a>
+      <a href="cabanas.html">Cabanas</a>
+      <a href="hoteles.html">Hoteles</a>
+      <a class="active" href="restaurantes.html">Restaurantes</a>
+      <a href="planes.html">Planes</a>
+      <a href="lugares.html">Lugares</a>
+    </nav>
+
+    <a class="header-action" href="#explora">Explorar <span aria-hidden="true">&#8599;</span></a>
+  </header>
+
+  <main>
+    <section class="hero restaurant-hero" aria-labelledby="restaurant-title">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Sabor del valle</p>
+        <h1 id="restaurant-title">Sabores que hacen<br><em>parar el tiempo.</em></h1>
+        <p class="hero-copy">Desde cocina local hasta cenas con vista al lago, aquí cada mesa te invita a vivir una experiencia distinta en Calima.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#explora">Descubre sabores <span aria-hidden="true">&#8594;</span></a>
+          <a class="text-link" href="#galeria">Ver galeria <span aria-hidden="true">&#8595;</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span class="note-line"></span><span>Experiencias locales</span></div>
+      <div class="scroll-cue"><span></span> Sigue explorando</div>
+    </section>
+
+    <section id="explora" class="explore-section section-shell restaurant-intro" aria-labelledby="restaurant-explore-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark"><span></span> Del lago a la mesa</p>
+          <h2 id="restaurant-explore-title">Dónde comer<br><em>sin prisa.</em></h2>
+        </div>
+        <p>En Calima cada rincón tiene su propio sabor: fogones de tradición, platos con vista y espacios para compartir la tarde.</p>
+      </div>
+
+      <div class="restaurant-highlights">
+        <article class="restaurant-card restaurant-card-large">
+          <span class="restaurant-badge">Platos típicos</span>
+          <h3>Cocina con identidad local</h3>
+          <p>Preparaciones con productos del valle, sazón casero y una presencia que honra la tierra del lago.</p>
+        </article>
+        <article class="restaurant-card">
+          <span class="restaurant-badge">Vista al agua</span>
+          <h3>Mesas con paisaje</h3>
+          <p>Degusta en espacios abiertos con una vista panorámica que convierte cada comida en un recuerdo.</p>
+        </article>
+        <article class="restaurant-card">
+          <span class="restaurant-badge">Noches de clima</span>
+          <h3>Ambiente relajado</h3>
+          <p>Una experiencia cálida y acogedora para cerrar el día con buena música, buena compañía y buena cena.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery-section section-shell" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark"><span></span> Postales gastronómicas</p>
+          <h2 id="gallery-title">Sabores para<br><em>recordar.</em></h2>
+        </div>
+        <div class="gallery-controls" aria-label="Controles de galeria">
+          <button class="gallery-button" id="gallery-prev" type="button" aria-label="Imagen anterior">&#8592;</button>
+          <button class="gallery-button" id="gallery-next" type="button" aria-label="Imagen siguiente">&#8594;</button>
+        </div>
+      </div>
+      <div class="gallery-frame">
+        <div class="gallery-track" id="gallery-track"></div>
+        <div class="gallery-caption"><span id="gallery-counter">01 / 04</span><strong id="gallery-title-current">Viento sobre el agua</strong><span id="gallery-location">Lago Calima</span></div>
+      </div>
+      <div class="gallery-dots" id="gallery-dots" aria-label="Seleccionar imagen"></div>
+    </section>
+
+    <section class="closing-section section-shell">
+      <p class="eyebrow eyebrow-dark"><span></span> Tu experiencia empieza aqui</p>
+      <h2>Disfruta cada<br><em>bocado.</em></h2>
+      <a class="button button-dark" href="planes.html">Ver planes del lago <span aria-hidden="true">&#8594;</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-footer">calima <small>vive el lago</small></span>
+    <span>Una guia local para perderse bonito.</span>
+    <span>&copy; 2026 Calima</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
