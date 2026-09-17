@@ -1,1 +1,117 @@
-Daniela Duque
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre nuestras cabañas premium y sencillas alrededor del Lago Calima.">
+  <title>Cabañas | Calima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Calima, inicio">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span><strong>calima</strong><small>vive el lago</small></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegacion principal">
+      <a href="index.html">Inicio</a>
+      <a href="fincas.html">Fincas</a>
+      <a class="active" href="cabanas.html">Cabanas</a>
+      <a href="hoteles.html">Hoteles</a>
+      <a href="restaurantes.html">Restaurantes</a>
+      <a href="planes.html">Planes</a>
+      <a href="lugares.html">Lugares</a>
+    </nav>
+
+    <a class="header-action" href="index.html">Principal <span aria-hidden="true">&#8592;</span></a>
+  </header>
+
+  <main>
+    <!-- Cabecera interna de Cabañas -->
+    <section class="hero hero-internal" aria-labelledby="cabanas-title" style="background: linear-gradient(90deg, rgba(11, 45, 47, .88), rgba(11, 45, 47, .3)), url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=2000&q=85') center/cover;">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Hospedaje en el Lago</p>
+        <h1 id="cabanas-title">Refugios entre<br><em>bruma y bosque.</em></h1>
+        <p class="hero-copy">Despierta con la vista del agua o resguérdate junto a la montaña. Elige tu espacio ideal.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="index.html">Regresar al inicio <span aria-hidden="true">&#8592;</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span class="note-line"></span><span>Experiencia única en Calima</span></div>
+    </section>
+
+    <!-- Sección Cabañas Premium -->
+    <section class="section-shell" aria-labelledby="premium-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark"><span></span> Exclusividad y Confort</p>
+          <h2 id="premium-title">Cabañas<br><em>Premium.</em></h2>
+        </div>
+        <p>Espacios amplios de diseño contemporáneo, ventanales panorámicos y amenidades de alta gama frente al lago.</p>
+      </div>
+
+      <div class="category-grid cabins-grid-3">
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">PREMIUM 01</span>
+          <span class="category-name">Cabaña Mirador del Lago <i>&#8599;</i></span>
+        </div>
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">PREMIUM 02</span>
+          <span class="category-name">Refugio Brisa Alpina <i>&#8599;</i></span>
+        </div>
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">PREMIUM 03</span>
+          <span class="category-name">Cabaña <i>&#8599;</i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Cabañas Sencillas / Acogedoras -->
+    <section class="section-shell" aria-labelledby="sencillas-title" style="padding-top: 0;">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark"><span></span> Rústico y Acogedor</p>
+          <h2 id="sencillas-title">Cabañas<br><em>Sencillas.</em></h2>
+        </div>
+        <p>Alternativas ideales para conectar de manera íntima con la naturaleza, madera cálida y un ambiente hogareño.</p>
+      </div>
+
+      <div class="category-grid cabins-grid-3">
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">ESTÁNDAR 01</span>
+          <span class="category-name">Cabaña El Pinar <i>&#8599;</i></span>
+        </div>
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">ESTÁNDAR 02</span>
+          <span class="category-name">Rincón del Viento <i>&#8599;</i></span>
+        </div>
+        <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80'); grid-row: span 1;">
+          <span class="card-number">ESTÁNDAR 03</span>
+          <span class="category-name">Cabaña Silvestre <i>&#8599;</i></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section section-shell">
+      <p class="eyebrow eyebrow-dark"><span></span> Tu aventura continúa</p>
+      <h2>¿Listo para vivir<br><em>Calima?</em></h2>
+      <a class="button button-dark" href="index.html">Volver a la página principal <span aria-hidden="true">&#8592;</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-footer">calima <small>vive el lago</small></span>
+    <span>Una guia local para perderse bonito.</span>
+    <span>&copy; 2026 Calima</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
